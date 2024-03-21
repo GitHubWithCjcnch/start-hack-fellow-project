@@ -1,9 +1,13 @@
 import { FC } from "react";
 
-const Main: FC = (props) => {
+interface MainProps {
+    page: any;
+}
+
+const Main: FC<MainProps> = ({ page }) => {
     return (
-        <div className="flex-grow min-h-screen overflow-auto">
-            AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 
+        <div className="flex-grow break-all overflow-auto">
+            {page}
         </div>
     )
 }
