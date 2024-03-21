@@ -49,8 +49,8 @@ const Filter: React.FC<FilterProps> = ({ batches, industries }) => {
   };
 
   return (
-    <div className="w-64 flex gap-2 flex-col bg-[#191919] px-5 py-4 rounded-lg">
-      <h2 className="text-lg base text-white font-semibold mb-4">Filter</h2>
+    <div className="w-64 flex gap-6 flex-col bg-[#191919] px-5 py-4 rounded-lg">
+      <h2 className="text-lg base text-white font-semibold">Filter</h2>
       {/* Batches */}
       <div className="flex flex-col gap-2">
         <p className="text-base text-white font-semibold">Batches</p>
