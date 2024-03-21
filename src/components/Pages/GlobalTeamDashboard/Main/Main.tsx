@@ -10,7 +10,6 @@ interface MainProps {
 
 const Main: FC<MainProps> = ({ page }) => {
     let Element: any;
-
     if (page === "dashboard") {
         Element = () => <Dashboard />
     } else if (page === "startups") {
@@ -22,7 +21,8 @@ const Main: FC<MainProps> = ({ page }) => {
     }
     
     return (
-        <div className="flex-grow break-all overflow-auto">
+        <div className="flex flex-col items-center justify-center flex-grow break-all h-screen overflow-auto bg-black text-white">
+            <span className="text-white text-4xl font-bold uppercase mt-20 mb-20">HI Paul!</span>
             <Element />
         </div>
     )
