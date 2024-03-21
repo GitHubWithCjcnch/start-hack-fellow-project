@@ -14,7 +14,7 @@ const Startups: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const [searchTerm, setSearchTerm] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
   const [selectedBatches, setSelectedBatches] = useState([]);
   const [selectedIndustries, setSelectedIndustries] = useState([]);
 
@@ -140,7 +140,12 @@ const Startups: React.FC = () => {
       )
       .then((response) => {
         if (response.status == 200) {
-          console.log(response.data.startups.rows);
+          console.log(
+            response.data.startups.rows,
+            searchTerm,
+            selectedBatches,
+            selectedIndustries
+          );
           setStartups(response.data.startups.rows);
         } else {
           console.log(response);
