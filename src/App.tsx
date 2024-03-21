@@ -25,9 +25,12 @@ const router = createBrowserRouter([
 ])
 
 function App() {
+  const isStartup = true
+  const isFellowship = false
+  const isMentorship = false
 
   return (
-    <RouterProvider router={router} />
+      <RouterProvider router={router} />
   )
 }
 
