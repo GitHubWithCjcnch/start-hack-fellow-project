@@ -21,7 +21,7 @@ const Main: FC<MainProps> = ({ page }) => {
     }
     
     return (
-        <div className="flex-grow break-all h-screen overflow-auto bg-black text-white">
+        <div className="flex-grow break-all h-screen bg-black text-white">
             <Element />
         </div>
     )
