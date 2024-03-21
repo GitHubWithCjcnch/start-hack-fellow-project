@@ -5,6 +5,7 @@ import { z } from 'zod';
 import './Login.css'
 import { Button } from "@/components/ui/button"
 import backgroundImage from '../../../assets/global_polygon.png'
+import axios from 'axios'
 
 import {
     Form,
@@ -36,12 +37,19 @@ const Login: FC = () => {
     })
 
     function onSubmit(values: z.infer<typeof schema>) {
-        console.log(values)
+        axios.post('http://3.75.226.182:8080/api/auth/signin').then((res) => {
+            params: {
+                email: values.email
+                password: values.password
+            }
+        }).catch((err) => {
+            console.error(err)
+        })
     }
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen"
-        style={{backgroundColor: '#101010',backgroundImage: `url(${backgroundImage})`, backgroundSize: '50%', backgroundPosition: 'center', backgroundRepeat: "no-repeat"}}    
+            style={{backgroundImage: `url(${backgroundImage})`, backgroundSize: '50%', backgroundPosition: 'center', backgroundRepeat: "no-repeat" }}
         >
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 w-full sm:w-96 border p-10 rounded bg-white" style={{ borderColor: '#808080' }}>
