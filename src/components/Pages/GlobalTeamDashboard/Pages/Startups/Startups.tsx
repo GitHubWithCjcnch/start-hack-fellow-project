@@ -181,7 +181,7 @@ const Startups: React.FC = () => {
     setIsLoading(false);
   };
   return (
-    <div className="flex flex-col p-12 gap-14">
+    <div className="h-full flex flex-col p-12 gap-14">
       <h1 className="font-bold text-white text-4xl">STARTUPS</h1>
       <div className="flex flex-row gap-10">
         <Filter
