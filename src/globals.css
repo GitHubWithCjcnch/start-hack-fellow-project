@@ -15,6 +15,10 @@ body {
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  background-color: black;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
