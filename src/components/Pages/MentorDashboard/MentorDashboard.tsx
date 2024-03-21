@@ -1,10 +1,10 @@
 import { FC } from "react";
 
-const FellowDashboard: FC = () => {
+const MentorDashboard: FC = () => {
     return (
         <>
         </>
     )
 }
 
-export default FellowDashboard;
+export default MentorDashboard;
