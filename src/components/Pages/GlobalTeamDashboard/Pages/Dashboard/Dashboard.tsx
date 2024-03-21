@@ -9,6 +9,9 @@ import BadgeProgressTracker from "@/components/Reusable/BadgeProgressTracker";
 export default function Dashboard() {
     return (
         <div className="h-screen space-y-10">
+            <div className="w-full flex justify-center">
+                <span className="text-white text-4xl font-bold uppercase my-10">HI Paul!</span>
+            </div>
             <div className="flex space-x-20">
                 <div className="flex flex-col space-y-10">
                     <div className="flex space-x-4">
