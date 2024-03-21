@@ -22,7 +22,7 @@ const Notifications: FC<MainProps> = ({ notification }) => {
     const { type, title, company } = notification;
 
     return (
-        <div className="mx-auto max-w-lg p-5 rounded-sm bg-[#191919] text-white">
+        <div className="mx-auto max-w-lg min-h-full p-5 rounded-sm bg-[#191919] text-white">
             <div className="flex items-center mb-5">
                 <FontAwesomeIcon icon={faBell} />
                 <h2 className="ml-2">Notifications</h2>

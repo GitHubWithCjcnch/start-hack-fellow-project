@@ -22,7 +22,7 @@ const Main: FC<MainProps> = ({ page }) => {
     
     return (
         <div className="flex flex-col items-center justify-center flex-grow break-all h-screen overflow-auto bg-black text-white">
-            <span className="text-white text-4xl font-bold uppercase mt-20 mb-20">HI Paul!</span>
+            <span className="text-white text-4xl font-bold uppercase my-12">HI Paul!</span>
             <Element />
         </div>
     )

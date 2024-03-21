@@ -4,12 +4,13 @@ import NotionLogo from '../../../../../assets/notion_logo.png'
 import AsanaLogo from '../../../../../assets/asana_logo.png'
 import { Link } from "react-router-dom";
 import Tasks  from "@/components/Reusable/Tasks/Tasks";
+import BadgeProgressTracker from "@/components/Reusable/BadgeProgressTracker";
 
 export default function Dashboard() {
     return (
-        <div className="h-screen">
+        <div className="h-screen space-y-10">
             <div className="flex space-x-20">
-                <div className="flex flex-col">
+                <div className="flex flex-col space-y-10">
                     <div className="flex space-x-4">
                         <Link className="flex flex-col items-center px-14 py-5 bg-[#333333] rounded transition-colors ease-in-out duration-200 hover:bg-[#444444]" to="">
                             <img src={SlackLogo} alt="slack_logo" className="w-16 h-16 mb-2 object-contain" />
@@ -24,11 +25,8 @@ export default function Dashboard() {
                             <span className="font-bold text-white whitespace-nowrap">Asana</span>
                         </Link>
                     </div>
-
                     <Tasks />
                 </div>
-
-                
                 <div className="w-2/4">
                     <Notifications
                         notification={{
@@ -38,6 +36,9 @@ export default function Dashboard() {
                         }}
                     />
                 </div>
+            </div>
+            <div>
+                <BadgeProgressTracker />
             </div>
         </div>
     )
