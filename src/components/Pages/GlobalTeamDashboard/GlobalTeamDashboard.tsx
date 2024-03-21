@@ -24,7 +24,7 @@ const GlobalTeamDashboard: FC = () => {
       <div className="w-64 bg-gray-900 text-white min-h-screen">
         <NavMenu />
       </div>
-      <div className="flex-grow bg-gray-100 min-h-screen">
+      <div className="flex-grow bg-black min-h-screen">
         <Element />
       </div>
     </div>
