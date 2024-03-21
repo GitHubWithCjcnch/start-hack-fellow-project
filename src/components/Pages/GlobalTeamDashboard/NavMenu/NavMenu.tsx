@@ -27,7 +27,7 @@ const NavItem: React.FC<NavItemProps> = ({ to, Icon, children }) => (
 const NavMenu: React.FC = () => {
   return (
     <div
-      className="w-64 min-h-screen p-6 flex flex-col justify-between text-white"
+      className="w-64 min-h-screen p-6 flex flex-col justify-between text-white sticky top-0 left-0 z-50"
       style={{ backgroundColor: "#191919" }}
     >
       <div className="grid gap-5 grid-cols-1">

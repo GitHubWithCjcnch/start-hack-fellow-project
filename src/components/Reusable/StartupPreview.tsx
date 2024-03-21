@@ -32,7 +32,7 @@ const StartupPreview: React.FC<StartupPreviewProps> = ({
   const stageIndex = Object.keys(stages).indexOf(stage);
 
   return (
-    <div className="w-full flex-row flex bg-[#333333] px-6 py-4 rounded-md justify-between items-center">
+    <div className="w-full flex-row flex bg-[#333333] px-6 py-4 rounded-md justify-between items-center gap-10">
       <div className="flex flex-row gap-3">
         <img
           className="w-24 object-contain"
@@ -45,16 +45,16 @@ const StartupPreview: React.FC<StartupPreviewProps> = ({
             <p className="font-medium text-[#CDCDCD] text-xs">{location}</p>
           </div>
           <p className="font-medium text-white text-sm">{description}</p>
-          <div className="flex flex-row gap-2 py-1">
+          <div className="flex flex-row flex-wrap gap-2 py-1">
             <span className="px-1.5 py-1 bg-[#460004] font-medium text-white text-xs rounded-[5px]">
               {badge}
             </span>
             {industrials.map((industrial, index) => (
               <span
-                className="px-1.5 py-1 bg-[#444444] font-medium text-white text-xs rounded-[5px]"
                 key={index}
+                className="px-1.5 py-1 bg-[#444444] font-medium text-white text-xs rounded-[5px]"
               >
-                {industrial}
+                {industrial.industry.name}
               </span>
             ))}
           </div>
@@ -71,7 +71,7 @@ const StartupPreview: React.FC<StartupPreviewProps> = ({
           ></div>
           {Object.keys(stages).map((key, index) => (
             <div
-              key={index}
+              key={key}
               className={`bg-[#333333] border-2 border-[#666666] h-2 items-center 
             }  justify-center flex rounded-full z-20 ${
               index === stageIndex ? "w-6 h-6" : "w-3.5 h-3.5"

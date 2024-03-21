@@ -1,18 +1,33 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
 import { CheckedState } from "@radix-ui/react-checkbox";
 
 interface FilterProps {
   batches: string[];
   industries: string[];
+  onBatchesChange: (selectedBatches: string[]) => void;
+  onIndustriesChange: (selectedIndustries: string[]) => void;
 }
 
-const Filter: React.FC<FilterProps> = ({ batches, industries }) => {
+const Filter: React.FC<FilterProps> = ({
+  batches,
+  industries,
+  onBatchesChange,
+  onIndustriesChange,
+}) => {
   const [selectedBatches, setSelectedBatches] = useState<string[]>([]);
   const [allBatchesSelected, setAllBatchesSelected] = useState<boolean>(false);
   const [selectedIndustries, setSelectedIndustries] = useState<string[]>([]);
   const [allIndustriesSelected, setAllIndustriesSelected] =
     useState<boolean>(false);
+
+  useEffect(() => {
+    onBatchesChange(selectedBatches);
+  }, [selectedBatches, onBatchesChange]);
+
+  useEffect(() => {
+    onIndustriesChange(selectedIndustries);
+  }, [selectedIndustries, onIndustriesChange]);
 
   const handleBatchChange = (batch: string, checked: boolean) => {
     setAllBatchesSelected(false);
