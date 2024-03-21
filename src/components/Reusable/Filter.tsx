@@ -22,12 +22,17 @@ const Filter: React.FC<FilterProps> = ({
     useState<boolean>(false);
 
   useEffect(() => {
-    onBatchesChange(selectedBatches);
-  }, [selectedBatches, onBatchesChange]);
+    const allBatches = allBatchesSelected || selectedBatches.length === 0;
+    setAllBatchesSelected(allBatches);
+    onBatchesChange(allBatches ? batches : selectedBatches);
+  }, [selectedBatches, batches, onBatchesChange]);
 
   useEffect(() => {
-    onIndustriesChange(selectedIndustries);
-  }, [selectedIndustries, onIndustriesChange]);
+    const allIndustries =
+      allIndustriesSelected || selectedIndustries.length === 0;
+    setAllIndustriesSelected(allIndustries);
+    onIndustriesChange(allIndustries ? industries : selectedIndustries);
+  }, [selectedIndustries, industries, onIndustriesChange]);
 
   const handleBatchChange = (batch: string, checked: boolean) => {
     setAllBatchesSelected(false);
