@@ -33,7 +33,7 @@ const StartupPreview: React.FC<StartupPreviewProps> = ({
 
   return (
     <div className="w-full flex-row flex bg-[#333333] px-6 py-4 rounded-md justify-between items-center gap-10">
-      <div className="flex flex-row gap-3">
+      <div className="flex flex-row gap-4">
         <img
           className="w-24 object-contain"
           src={logo}

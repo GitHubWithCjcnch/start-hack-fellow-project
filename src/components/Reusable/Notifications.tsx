@@ -44,9 +44,9 @@ const Notifications: FC<MainProps> = ({ notifications }) => {
             <div className="flex items-center">
               <h4 className="font-bold">{item.title}</h4>
             </div>
-            <div className="flex items-center gap-1.5 text-sm">
+            <div className="flex items-center gap-1 text-sm">
               <p>from</p>
-              <span className="bg-[#460004] rounded-sm p-1.5 font-medium text-sm">
+              <span className="bg-[#460004] rounded-sm px-1.5 py-1 font-medium text-sm">
                 {item.company}
               </span>
             </div>
