@@ -35,7 +35,7 @@ const StartupPreview: React.FC<StartupPreviewProps> = ({
   return (
     <div
       onClick={() => navigate(`/startup/${startupName}`)}
-      className="w-full flex-row flex bg-[#333333] px-6 py-4 rounded-md justify-between items-center gap-10 cursor-pointer hover:bg-[#444444] transition-colors duration-200"
+      className="w-full flex-row flex bg-[#333333] px-6 py-4 rounded-lg justify-between items-center gap-10 cursor-pointer hover:bg-[#444444] transition-colors duration-200"
     >
       <div className="flex flex-row gap-3">
         <img
