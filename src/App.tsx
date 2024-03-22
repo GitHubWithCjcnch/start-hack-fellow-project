@@ -6,6 +6,7 @@ import Login from "./components/Pages/Login/Login";
 import GlobalTeamDashboard from "./components/Pages/GlobalTeamDashboard/GlobalTeamDashboard";
 import MentorDashboard from "./components/Pages/MentorDashboard/MentorDashboard";
 import FellowDashboard from "./components/Pages/FellowDashboard/FellowDashboard";
+import { StartupDetailed } from "./components/Reusable/StartupDetailed";
 
 function App() {
   const isGlobalTeam = true;
@@ -25,6 +26,10 @@ function App() {
     {
       children: [
         {
+          path: "/",
+          element: <Home />,
+        },
+        {
           path: "/login",
           element: <Login />,
         },
@@ -33,8 +38,8 @@ function App() {
           element: <Dashboard />,
         },
         {
-          path: "/",
-          element: <Home />,
+          path: "/startup/:startupname",
+          element: <StartupDetailed />,
         },
       ],
     },

@@ -5,7 +5,7 @@ import { z } from 'zod';
 import './Login.css'
 import { Button } from "@/components/ui/button"
 import backgroundImage from '../../../assets/global_polygon.png'
-import axios from 'axios'
+import AuthService from '@/credentials/AuthService';
 
 import {
     Form,
@@ -16,36 +16,32 @@ import {
     FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-
+import { useNavigate } from 'react-router-dom';
 
 const schema = z.object({
     email: z.string().email({
         message: "Enter a valid email."
     }),
-    password: z.string().min(8, {
-        message: "Password must be at least 8 characters."
+    password: z.string().min(6, {
+        message: "Password must be at least 6 characters."
     })
 })
-
 const Login: FC = () => {
+    const navigate = useNavigate();
     const form = useForm<z.infer<typeof schema>>({
-        resolver: zodResolver(schema),
-        defaultValues: {
-            email: "",
-            password: ""
-        }
+      resolver: zodResolver(schema),
+      defaultValues: {
+        email: "",
+        password: ""
+      }
     })
-
-    function onSubmit(values: z.infer<typeof schema>) {
-        axios.post('http://3.75.226.182:8080/api/auth/signin').then((res) => {
-            params: {
-                email: values.email
-                password: values.password
-            }
-        }).catch((err) => {
-            console.error(err)
-        })
+  
+    async function onSubmit(values: z.infer<typeof schema>) {
+     if(await AuthService.login(values.email, values.password)) {
+         navigate('/dashboards')
+     }
     }
+  
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen"
