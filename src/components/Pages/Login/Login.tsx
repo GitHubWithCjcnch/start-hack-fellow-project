@@ -42,46 +42,53 @@ const Login: FC = () => {
      }
     }
   
-
-    return (
-        <div className="flex flex-col items-center justify-center min-h-screen"
-            style={{backgroundImage: `url(${backgroundImage})`, backgroundSize: '50%', backgroundPosition: 'center', backgroundRepeat: "no-repeat" }}
+  return (
+    <div
+      className="flex flex-col items-center justify-center min-h-screen"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: "50%",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <Form {...form}>
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="space-y-8 w-full sm:w-96 border p-10 rounded bg-white"
+          style={{ borderColor: "#808080" }}
         >
-            <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 w-full sm:w-96 border p-10 rounded bg-white" style={{ borderColor: '#808080' }}>
-                    <FormField
-                        control={form.control}
-                        name="email"
-                        render={({ field }) => (
-                            <FormItem>
-                                <FormLabel>Email</FormLabel>
-                                <FormControl>
-                                    <Input {...field} />
-                                </FormControl>
-                                <FormMessage />
-                            </FormItem>
-                        )}
-                    >
-                    </FormField>
-                    <FormField
-                        control={form.control}
-                        name="password"
-                        render={({ field }) => (
-                            <FormItem>
-                                <FormLabel>Password</FormLabel>
-                                <FormControl>
-                                    <Input {...field} />
-                                </FormControl>
-                                <FormMessage />
-                            </FormItem>
-                        )}
-                    >
-                    </FormField>
-                    <Button type="submit">Login</Button>
-                </form>
-            </Form>
-        </div>
-    );
-}
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Email</FormLabel>
+                <FormControl>
+                  <Input {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          ></FormField>
+          <FormField
+            control={form.control}
+            name="password"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Password</FormLabel>
+                <FormControl>
+                  <Input {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          ></FormField>
+          <Button type="submit">Login</Button>
+        </form>
+      </Form>
+    </div>
+  );
+};
 
 export default Login;

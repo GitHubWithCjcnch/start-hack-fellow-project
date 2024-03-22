@@ -201,7 +201,7 @@ const Startups: React.FC = () => {
                 key={index}
                 startupName={startup.name}
                 location={startup.region}
-                logo={"./Productlogo.png"}
+                logo={"./logos/Logo" + (index + 1) + ".png"}
                 description={startup.description}
                 industrials={startup.startup_industries}
                 stage={startup.status}
