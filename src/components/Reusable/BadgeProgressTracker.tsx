@@ -53,7 +53,7 @@ const BadgeProgressTracker = () => {
           </div>
           <Link
             to="/dashboards#startups"
-            className="font-semibold text-[#FE8902] hover:text-[#ff8f42]"
+            className="font-bold text-[#FE8902] hover:text-[#ff8f42]"
           >
             View all participants
           </Link>

@@ -11,7 +11,7 @@ export default function Dashboard() {
     <div className="flex flex-col items-center justify-center">
       <div className="w-[87.5%] pt-10 h-screen space-y-8 ">
         <div className="w-full flex justify-center">
-          <span className="text-white text-5xl font-bold uppercase my-6">
+          <span className="text-white text-5xl font-black uppercase my-6">
             HI Lorenz!
           </span>
         </div>
