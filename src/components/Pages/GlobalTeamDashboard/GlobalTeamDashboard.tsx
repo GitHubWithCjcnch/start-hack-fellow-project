@@ -21,7 +21,7 @@ const GlobalTeamDashboard: FC = () => {
 
   return (
     <div className="flex">
-      <div className="w-64 bg-gray-900 text-white min-h-screen">
+      <div className="w-56 bg-gray-900 text-white min-h-screen">
         <NavMenu />
       </div>
       <div className="flex-grow bg-black min-h-screen">

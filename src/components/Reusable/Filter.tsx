@@ -69,7 +69,7 @@ const Filter: React.FC<FilterProps> = ({
   };
 
   return (
-    <div className="w-64 flex gap-6 flex-col bg-[#191919] px-5 py-4 rounded-lg">
+    <div className="w-72 flex gap-6 flex-col bg-[#191919] px-5 py-4 rounded-lg">
       <h2 className="text-lg base text-white font-semibold">Filter</h2>
       {/* Batches */}
       <div className="flex flex-col gap-2">
