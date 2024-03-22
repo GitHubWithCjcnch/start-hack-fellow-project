@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 interface StartupPreviewProps {
   startupName: string;
@@ -30,9 +31,12 @@ const StartupPreview: React.FC<StartupPreviewProps> = ({
   };
 
   const stageIndex = Object.keys(stages).indexOf(stage);
-
+  const navigate = useNavigate()
   return (
-    <div className="w-full flex-row flex bg-[#333333] px-6 py-4 rounded-md justify-between items-center gap-10">
+    <div
+      onClick={() => navigate(`/startup/${startupName}`)}
+      className="w-full flex-row flex bg-[#333333] px-6 py-4 rounded-lg justify-between items-center gap-10 cursor-pointer hover:bg-[#444444] transition-colors duration-200"
+    >
       <div className="flex flex-row gap-4">
         <img
           className="w-24 object-contain"
