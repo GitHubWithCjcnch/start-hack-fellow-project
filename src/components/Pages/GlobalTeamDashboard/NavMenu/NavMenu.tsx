@@ -45,13 +45,13 @@ const NavMenu: React.FC = () => {
         <img src={white_FS_svg} alt="fellow_logo" className="mb-2 w-40" />
         <hr className="my-2 border-t-2 rounded border-[#999]" />
         <ul className="mt-2 font-bold">
-          <NavItem to="#dashboard" svg={<HomeSVG />}>
+          <NavItem to="/dashboards#dashboard" svg={<HomeSVG />}>
             Dashboard
           </NavItem>
           <NavItem to="#request" svg={<MessageSVG />}>
             Request
           </NavItem>
-          <NavItem to="#startups" svg={<StockSVG />}>
+          <NavItem to="/dashboards#startups" svg={<StockSVG />}>
             Startups
           </NavItem>
           <NavItem to="#mentors" svg={<EducationSVG />}>

@@ -18,13 +18,13 @@ const BadgeProgressTracker = () => {
   const stage = "SeriesA";
 
   const stages = {
-    Idea: "Idea Stage",
-    PreSeed: "Pre-seed Stage",
-    Seed: "Seed Stage",
-    SeriesA: "Series A Stage",
-    SeriesB: "Series B Stage",
-    SeriesC: "Series C Stage",
-    Exit: "Exit Stage",
+    Idea: "Orientation",
+    PreSeed: "Training",
+    Seed: "Mentorship",
+    SeriesA: "Networking",
+    SeriesB: "Pitch Prep",
+    SeriesC: "Demo Day",
+    Exit: "Post-Demo",
   };
 
   const stageIndex = Object.keys(stages).indexOf(stage);
